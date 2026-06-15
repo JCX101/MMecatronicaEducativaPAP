@@ -1,0 +1,1192 @@
+﻿<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mecatrónica em Portugal - Website educativo sobre Mecatrónica para a Prova de Aptidão Profissional (PAP). Descobre o que é a Mecatrónica, escolas, saídas profissionais e salários."
+    />
+    <title>InovaMec | Mecatrónica em Portugal | PAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- =================== NAVBAR =================== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <svg
+            class="logo-full"
+            viewBox="0 0 160 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="InovaMec"
+          >
+            <rect
+              x="2"
+              y="8"
+              width="24"
+              height="24"
+              rx="4"
+              stroke="white"
+              stroke-width="2"
+            />
+            <rect x="7" y="13" width="14" height="14" rx="2" fill="white" />
+            <line
+              x1="8"
+              y1="2"
+              x2="8"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="14"
+              y1="2"
+              x2="14"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="20"
+              y1="2"
+              x2="20"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="8"
+              y1="32"
+              x2="8"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="14"
+              y1="32"
+              x2="14"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="20"
+              y1="32"
+              x2="20"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="14"
+              x2="32"
+              y2="14"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="20"
+              x2="32"
+              y2="20"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="26"
+              x2="32"
+              y2="26"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <text
+              x="38"
+              y="27"
+              font-family="Orbitron, sans-serif"
+              font-size="16"
+              font-weight="700"
+              fill="white"
+            >
+              InovaMec
+            </text>
+          </svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#sobre" class="nav-link">O Que é</a></li>
+          <li><a href="#curiosidades" class="nav-link">Curiosidades</a></li>
+          <li><a href="#escolas" class="nav-link">Escolas</a></li>
+          <li><a href="#mapa" class="nav-link">Mapa</a></li>
+          <li><a href="#percurso" class="nav-link">Percurso</a></li>
+          <li><a href="#salarios" class="nav-link">Salários</a></li>
+          <li><a href="#futuro" class="nav-link">Futuro</a></li>
+        </ul>
+        <div class="header-menu-wrap">
+          <div class="header-menu-popup" id="header-menu-popup">
+            <a href="galeria.html" target="_blank" class="header-menu-item">
+              <i class="fa-solid fa-images"></i>
+              <span>Galeria</span>
+            </a>
+            <a href="faq.html" target="_blank" class="header-menu-item">
+              <i class="fa-solid fa-circle-question"></i>
+              <span>FAQ</span>
+            </a>
+            <a href="contacto.html" target="_blank" class="header-menu-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Contacto</span>
+            </a>
+          </div>
+          <button
+            class="header-sandwich"
+            id="header-sandwich"
+            aria-label="Menu rápido"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =================== HERO =================== -->
+    <section class="hero" id="hero">
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          Prova de Aptidão Profissional · Mecatrónica
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">O Futuro é</span>
+          <span class="title-highlight">Mecatrónica</span>
+        </h1>
+        <p class="hero-subtitle">
+          A ciência que une <strong>Mecânica</strong>,
+          <strong>Eletrónica</strong> e <strong>Informática</strong>
+          para criar as máquinas do amanhã.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Áreas Integradas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="47">0</span>
+            <span class="stat-label">Escolas em Portugal</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="2030">0</span>
+            <span class="stat-label">O Futuro Começa Aqui</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#sobre" class="btn btn-primary">Explorar</a>
+          <a href="galeria.html" target="_blank" class="btn btn-outline">Ver Galeria</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="gear-container">
+          <svg
+            class="hero-logo-big"
+            viewBox="0 0 160 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="InovaMec"
+          >
+            <rect
+              x="2"
+              y="8"
+              width="24"
+              height="24"
+              rx="4"
+              stroke="white"
+              stroke-width="2"
+            />
+            <rect x="7" y="13" width="14" height="14" rx="2" fill="white" />
+            <line
+              x1="8"
+              y1="2"
+              x2="8"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="14"
+              y1="2"
+              x2="14"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="20"
+              y1="2"
+              x2="20"
+              y2="8"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="8"
+              y1="32"
+              x2="8"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="14"
+              y1="32"
+              x2="14"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="20"
+              y1="32"
+              x2="20"
+              y2="38"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="14"
+              x2="32"
+              y2="14"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="20"
+              x2="32"
+              y2="20"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="26"
+              y1="26"
+              x2="32"
+              y2="26"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <text
+              x="38"
+              y="27"
+              font-family="Orbitron, sans-serif"
+              font-size="16"
+              font-weight="700"
+              fill="white"
+            >
+              InovaMec
+            </text>
+          </svg>
+          <div class="gear gear-2">⚙</div>
+          <div class="gear gear-3">⚙</div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- =================== SOBRE =================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Definição</span>
+          <h2 class="section-title">O Que é a Mecatrónica?</h2>
+          <p class="section-desc">
+            Uma disciplina interdisciplinar que combina engenharia mecânica,
+            eletrónica, sistemas de controlo e ciência da computação.
+          </p>
+        </div>
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p>
+              A <strong>Mecatrónica</strong> é uma área de engenharia que
+              integra de forma sinérgica a <em>mecânica</em>, a
+              <em>eletrónica</em>, a <em>informática</em> e os
+              <em>sistemas de controlo automático</em>. O conceito surgiu no
+              Japão nos anos 70, na empresa Yaskawa Electric, e rapidamente se
+              expandiu para todo o mundo.
+            </p>
+            <p>
+              Esta disciplina é a espinha dorsal de tecnologias como os robôs
+              industriais, os veículos autónomos, os drones, os sistemas de
+              manufatura inteligente e os dispositivos médicos de alta precisão.
+            </p>
+            <p>
+              Em Portugal, o curso profissional de Mecatrónica prepara os alunos
+              com competências técnicas avançadas para trabalhar em indústrias
+              como automóvel, aeronáutica, agroalimentar e energética.
+            </p>
+            <a
+              href="#percurso"
+              class="btn btn-primary"
+              style="margin-top: 1.5rem"
+              >Ver Percurso Profissional</a
+            >
+          </div>
+          <div class="sobre-cards">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-gear"></i></div>
+              <h3>Mecânica</h3>
+              <p>
+                Projeto e análise de sistemas mecânicos, materiais, cinemática e
+                dinâmica de máquinas.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h3>Eletrónica</h3>
+              <p>
+                Circuitos elétricos, sensores, atuadores, microcontroladores e
+                sistemas embebidos.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3>Informática</h3>
+              <p>
+                Programação, algoritmos, inteligência artificial e software de
+                controlo de sistemas.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-rotate"></i></div>
+              <h3>Controlo</h3>
+              <p>
+                Automação industrial, PLC, robótica, sistemas de malha fechada e
+                regulação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== CURIOSIDADES =================== -->
+    <section class="section section-dark" id="curiosidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Sabia que...</span>
+          <h2 class="section-title">Curiosidades sobre Mecatrónica</h2>
+        </div>
+        <div class="curiosidades-grid">
+          <div class="curiosidade-card">
+            <div class="curio-number">01</div>
+            <div class="curio-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Origem do Termo</h3>
+            <p>
+              O termo "Mecatrónica" foi criado em 1969 pelo engenheiro japonês
+              Tetsuro Mori, da Yaskawa Electric Corporation, combinando
+              "mecânica" e "eletrónica".
+            </p>
+          </div>
+          <div class="curiosidade-card">
+            <div class="curio-number">02</div>
+            <div class="curio-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>No Teu Carro</h3>
+            <p>
+              Um automóvel moderno tem mais de 100 módulos mecatrónicos — desde
+              o ABS aos airbags, do sistema Park Assist ao motor de injeção
+              direta.
+            </p>
+          </div>
+          <div class="curiosidade-card">
+            <div class="curio-number">03</div>
+            <div class="curio-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Indústria 4.0</h3>
+            <p>
+              A Quarta Revolução Industrial (Indústria 4.0) é impulsionada pela
+              Mecatrónica. Robôs colaborativos e fábricas inteligentes são os
+              pilares desta transformação.
+            </p>
+          </div>
+          <div class="curiosidade-card">
+            <div class="curio-number">04</div>
+            <div class="curio-icon">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <h3>Medicina de Alta Tecnologia</h3>
+            <p>
+              O robô cirúrgico Da Vinci, que opera com precisão milimétrica, é
+              um dos exemplos mais impressionantes da Mecatrónica na medicina.
+            </p>
+          </div>
+          <div class="curiosidade-card">
+            <div class="curio-number">05</div>
+            <div class="curio-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>No Espaço</h3>
+            <p>
+              Os braços robóticos da Estação Espacial Internacional (Canadarm2)
+              e os rovers de Marte usam sistemas mecatrónicos avançados.
+            </p>
+          </div>
+          <div class="curiosidade-card">
+            <div class="curio-number">06</div>
+            <div class="curio-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Mercado em Crescimento</h3>
+            <p>
+              O mercado global de robótica e automação, fortemente ligado à
+              Mecatrónica, deverá atingir os 260 mil milhões de dólares em 2030.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- =================== ESCOLAS =================== -->
+    <section class="section section-dark" id="escolas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Educação</span>
+          <h2 class="section-title">Escolas e Faculdades em Portugal</h2>
+          <p class="section-desc">
+            Onde podes estudar Mecatrónica em Portugal continental — desde
+            cursos profissionais a licenciaturas e mestrados.
+          </p>
+        </div>
+
+        <div class="schools-tabs">
+          <button
+            class="tab-btn active"
+            data-tab="profissionais"
+            id="tab-profissionais"
+          >
+            Escolas Profissionais
+          </button>
+          <button
+            class="tab-btn"
+            data-tab="universidades"
+            id="tab-universidades"
+          >
+            Universidades
+          </button>
+        </div>
+
+        <div class="tab-content active" id="profissionais">
+          <div class="schools-grid">
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>EPRM – Escola Profissional de Rio Maior</h3>
+              <p class="school-location">📍 Rio Maior, Santarém</p>
+              <p>
+                Curso Profissional de Técnico de Mecatrónica, com forte ligação
+                à indústria local e regional.
+              </p>
+              <span class="school-course">Técnico de Mecatrónica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>EPB – Escola Profissional de Braga</h3>
+              <p class="school-location">📍 Braga</p>
+              <p>
+                Formação técnica em Mecatrónica com módulos práticos em
+                automação e controlo industrial.
+              </p>
+              <span class="school-course">Técnico de Mecatrónica Automóvel</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>EPT – Escola Profissional de Trancoso</h3>
+              <p class="school-location">📍 Trancoso, Guarda</p>
+              <p>
+                Curso profissional Mecatrónica direcionada para a industria automóvel.
+              </p>
+              <span class="school-course">Técnico de Mecatrónica Automóvel</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>EPVL – Escola Profissional Vasconcellos Lebre Mealhada</h3>
+              <p class="school-location">📍 Mealhada</p>
+              <p>
+                Formação Profissional, Curso Profissional de Técnico de Mecatrónica.
+              </p>
+              <span class="school-course">Técnico de Mecatrónica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>ETPC – Escola Técnico Profissional de Cantanhede</h3>
+              <p class="school-location">📍 Cantanhede, Coimbra</p>
+              <p>
+                Formação Profissional, Curso Profissional de Técnico de Eletrónica e Automação.
+              </p>
+              <span class="school-course">Técnico de Eletrónica e Automação</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type pro">Profissional</div>
+              <h3>EPA – Escola Profissional de Aveiro</h3>
+              <p class="school-location">📍 Aveiro</p>
+              <p>
+                Escola com tradição em cursos técnicos da área industrial,
+                próxima ao polo tecnológico de Aveiro.
+              </p>
+              <span class="school-course">Técnico de Mecatrónica Automóvel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="universidades">
+          <div class="schools-grid">
+            <div class="school-card">
+              <div class="school-type uni">Universidade</div>
+              <h3>Instituto Superior Técnico (IST)</h3>
+              <p class="school-location">📍 Lisboa</p>
+              <p>
+                Referência nacional em Engenharia Mecânica e Eletrotécnica, com
+                forte componente de robótica.
+              </p>
+              <span class="school-course">Eng. Mecânica / Eletrotécnica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type uni">Universidade</div>
+              <h3>Universidade do Minho</h3>
+              <p class="school-location">📍 Braga / Guimarães</p>
+              <p>
+                Mestrado integrado em Engenharia Mecatrónica, um dos pioneiros
+                em Portugal nesta área.
+              </p>
+              <span class="school-course">Engenharia Mecatrónica (Mestrado)</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type uni">Universidade</div>
+              <h3>Universidade de Coimbra</h3>
+              <p class="school-location">📍 Coimbra</p>
+              <p>
+                FCTUC com forte investigação em robótica, sistemas embebidos e
+                automação industrial.
+              </p>
+              <span class="school-course">Engenharia Mecânica / Eletrotécnica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type uni">Instituto Politécnico</div>
+              <h3>ISEP – Instituto Superior de Engenharia</h3>
+              <p class="school-location">📍 Porto</p>
+              <p>
+                Licenciatura e Mestrado em Engenharia Eletrotécnica e de
+                Computadores com especialização em automação.
+              </p>
+              <span class="school-course">Engenharia Eletrotécnica / Mecânica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type uni">Instituto Politécnico</div>
+              <h3>Instituto Politécnico de Setúbal</h3>
+              <p class="school-location">📍 Setúbal</p>
+              <p>
+                Engenharia Mecatrónica e Robótica — uma licenciatura diretamente
+                orientada para a área.
+              </p>
+              <span class="school-course">Engenharia Mecatrónica e Robótica</span>
+            </div>
+            <div class="school-card">
+              <div class="school-type uni">Instituto Politécnico</div>
+              <h3>ISEL – Inst. Superior de Eng. de Lisboa</h3>
+              <p class="school-location">📍 Lisboa</p>
+              <p>
+                Forte tradição em cursos de engenharia com saídas para
+                automação, controlo e robótica.
+              </p>
+              <span class="school-course">Engenharia Eletrónica / Mecânica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MAPA =================== -->
+    <section class="section" id="mapa">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Localização</span>
+          <h2 class="section-title">Mapa de Portugal</h2>
+          <p class="section-desc">
+            Distribuição geográfica das principais instituições de ensino de
+            Mecatrónica no continente.
+          </p>
+        </div>
+        <div class="map-wrapper">
+            <div class="map-container">
+                <div id="map-leaflet" style="height: 550px; width: 100%; border-radius: 16px;"></div>
+            </div>
+          <!-- <div class="map-container"> -->
+            <!--<iframe
+              id="portugal-map"
+              title="Mapa de Portugal com escolas de Mecatrónica"
+              width="100%"
+              height="550"
+              style="border: 0; border-radius: 16px"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-9.5%2C36.9%2C-6.0%2C42.2&layer=mapnik&marker=39.5%2C-8.0"
+            > -->
+            </iframe>
+          </div>
+        </div>
+    </section>
+
+    <!-- =================== PERCURSO =================== -->
+    <section class="section section-dark" id="percurso">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Carreira</span>
+          <h2 class="section-title">Percurso Profissional</h2>
+          <p class="section-desc">
+            Do curso profissional ao topo da carreira — o caminho de um técnico
+            de Mecatrónica.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3>Curso Profissional</h3>
+              <span class="timeline-years">3 anos · 10º ao 12º</span>
+              <p>
+                Formação técnica intensiva com módulos práticos. Termina com a
+                Prova de Aptidão Profissional (PAP). Equivalência ao 12º ano +
+                qualificação nível 4.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <h3>Técnico Júnior</h3>
+              <span class="timeline-years">0–2 anos de experiência</span>
+              <p>
+                Primeiro emprego como técnico de manutenção, operador de CNC,
+                técnico de automação ou eletricista industrial. Salário entre
+                900€ – 1.200€/mês.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-ruler-combined"></i>
+              </div>
+              <h3>Licenciatura / Mestrado (opcional)</h3>
+              <span class="timeline-years">3–5 anos adicionais</span>
+              <p>
+                Acesso ao ensino superior via concurso (Maiores de 23 anos,
+                exames nacionais). Cursos de Engenharia Mecatrónica,
+                Eletrotécnica ou Mecânica.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-card">
+              <div class="timeline-icon"><i class="fa-solid fa-gear"></i></div>
+              <h3>Técnico Especializado</h3>
+              <span class="timeline-years">3–7 anos de experiência</span>
+              <p>
+                Programador de robôs, engenheiro de automação, projetista de
+                sistemas mecatrónicos. Salário entre 1.400€ – 2.200€/mês.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-dot">5</div>
+            <div class="timeline-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <h3>Posição Sénior / Gestão</h3>
+              <span class="timeline-years">8+ anos de experiência</span>
+              <p>
+                Engenheiro sénior, responsável de manutenção, diretor de
+                produção ou consultor independente. Salário a partir de 2.500€ –
+                4.000€/mês.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="saidas-section">
+          <h3 class="saidas-title">Principais Saídas Profissionais</h3>
+          <div class="saidas-grid">
+            <div class="saida-item">
+              <span class="saida-icon"><i class="fa-solid fa-robot"></i></span>
+              <span>Programador de Robôs</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"><i class="fa-solid fa-plug"></i></span>
+              <span>Técnico de Automação</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"
+                ><i class="fa-solid fa-screwdriver-wrench"></i
+              ></span>
+              <span>Técnico de Manutenção</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"
+                ><i class="fa-solid fa-chart-bar"></i
+              ></span>
+              <span>Engenheiro de Processos</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"
+                ><i class="fa-solid fa-drafting-compass"></i
+              ></span>
+              <span>Projetista de Máquinas</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"
+                ><i class="fa-solid fa-laptop-code"></i
+              ></span>
+              <span>Desenvolvedor de Sistemas</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"><i class="fa-solid fa-plane"></i></span>
+              <span>Técnico de Aeronáutica</span>
+            </div>
+            <div class="saida-item">
+              <span class="saida-icon"
+                ><i class="fa-solid fa-seedling"></i
+              ></span>
+              <span>Automação Agroindustrial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SALÁRIOS =================== -->
+    <section class="section" id="salarios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Remuneração</span>
+          <h2 class="section-title">Salários em Portugal</h2>
+          <p class="section-desc">
+            Valores médios mensais brutos para profissionais de Mecatrónica em
+            Portugal (Dados de 2024).
+          </p>
+        </div>
+        <div class="salary-grid">
+          <div class="salary-card">
+            <div class="salary-icon"><i class="fa-solid fa-wrench"></i></div>
+            <h3>Técnico de Manutenção</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar" data-width="45">
+                <span class="salary-amount">900€ – 1.300€</span>
+              </div>
+            </div>
+            <p class="salary-desc">Nível de entrada · Indústria geral</p>
+          </div>
+
+          <div class="salary-card">
+            <div class="salary-icon"><i class="fa-solid fa-gear"></i></div>
+            <h3>Técnico de Automação</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar" data-width="58">
+                <span class="salary-amount">1.200€ – 1.700€</span>
+              </div>
+            </div>
+            <p class="salary-desc">2–4 anos de experiência · Indústria</p>
+          </div>
+
+          <div class="salary-card">
+            <div class="salary-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>Programador de Robôs</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar" data-width="68">
+                <span class="salary-amount">1.500€ – 2.200€</span>
+              </div>
+            </div>
+            <p class="salary-desc">Especialização em KUKA, ABB, Fanuc</p>
+          </div>
+
+          <div class="salary-card">
+            <div class="salary-icon">
+              <i class="fa-solid fa-ruler-combined"></i>
+            </div>
+            <h3>Engenheiro Mecatrónico</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar" data-width="78">
+                <span class="salary-amount">1.800€ – 2.800€</span>
+              </div>
+            </div>
+            <p class="salary-desc">Licenciatura + 3–5 anos experiência</p>
+          </div>
+
+          <div class="salary-card">
+            <div class="salary-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h3>Engenheiro Sénior / Gestor</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar" data-width="92">
+                <span class="salary-amount">2.500€ – 4.500€</span>
+              </div>
+            </div>
+            <p class="salary-desc">8+ anos · Cargos de liderança</p>
+          </div>
+
+          <div class="salary-card">
+            <div class="salary-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Mercado Internacional</h3>
+            <div class="salary-bar-container">
+              <div class="salary-bar gold" data-width="100">
+                <span class="salary-amount">3.000€ – 8.000€</span>
+              </div>
+            </div>
+            <p class="salary-desc">Alemanha, Países Baixos, EUA, Suíça</p>
+          </div>
+        </div>
+        <div class="salary-note">
+          <span>⚠️</span>
+          <p>
+            Valores aproximados baseados em dados do INE, Randstad Portugal e
+            LinkedIn Jobs 2024. Os salários variam conforme a empresa, região e
+            especialização.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FUTURO =================== -->
+    <section class="section section-dark" id="futuro">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visão</span>
+          <h2 class="section-title">O Futuro da Mecatrónica</h2>
+          <p class="section-desc">
+            Tendências tecnológicas que estão a transformar o mundo e que a
+            Mecatrónica lidera.
+          </p>
+        </div>
+        <div class="futuro-grid">
+          <div class="futuro-card">
+            <div class="futuro-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>Robótica Colaborativa (Cobots)</h3>
+            <p>
+              Os cobots trabalham lado a lado com humanos, aumentando a
+              produtividade e segurança. O mercado de cobots crescerá 43% até
+              2028 a nível global.
+            </p>
+            <div class="futuro-progress">
+              <span>Adoção global</span>
+              <div class="progress-bar" data-width="75"></div>
+            </div>
+          </div>
+
+          <div class="futuro-card">
+            <div class="futuro-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Inteligência Artificial Industrial</h3>
+            <p>
+              Algoritmos de deep learning aplicados a manutenção preditiva,
+              controlo de qualidade e otimização de processos em tempo real.
+            </p>
+            <div class="futuro-progress">
+              <span>Crescimento do setor</span>
+              <div class="progress-bar" data-width="88"></div>
+            </div>
+          </div>
+
+          <div class="futuro-card">
+            <div class="futuro-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Internet das Coisas Industrial (IIoT)</h3>
+            <p>
+              Máquinas conectadas que comunicam, monitorizam e tomam decisões
+              autonomamente, criando fábricas inteligentes e eficientes.
+            </p>
+            <div class="futuro-progress">
+              <span>Implementação nas fábricas</span>
+              <div class="progress-bar" data-width="62"></div>
+            </div>
+          </div>
+
+          <div class="futuro-card">
+            <div class="futuro-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>Veículos Autónomos</h3>
+            <p>
+              Carros, drones e robots de entrega autónomos representam uma das
+              maiores revoluções tecnológicas em curso, com forte base
+              mecatrónica.
+            </p>
+            <div class="futuro-progress">
+              <span>Desenvolvimento tecnológico</span>
+              <div class="progress-bar" data-width="55"></div>
+            </div>
+          </div>
+
+          <div class="futuro-card">
+            <div class="futuro-icon"><i class="fa-solid fa-cubes"></i></div>
+            <h3>Impressão 3D e Manufatura Aditiva</h3>
+            <p>
+              Produção de componentes complexos camada a camada. A manufatura
+              aditiva integra mecânica, eletrónica e controlo computorizado de
+              forma exemplar.
+            </p>
+            <div class="futuro-progress">
+              <span>Maturidade da tecnologia</span>
+              <div class="progress-bar" data-width="70"></div>
+            </div>
+          </div>
+
+          <div class="futuro-card">
+            <div class="futuro-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Sustentabilidade e Green Tech</h3>
+            <p>
+              Energias renováveis, gestão inteligente de energia e automação de
+              processos eco-eficientes são áreas com enorme potencial de
+              crescimento.
+            </p>
+            <div class="futuro-progress">
+              <span>Investimento público/privado</span>
+              <div class="progress-bar" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="nav-logo">
+              <svg
+                class="logo-full"
+                viewBox="0 0 160 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="InovaMec"
+              >
+                <rect
+                  x="2"
+                  y="8"
+                  width="24"
+                  height="24"
+                  rx="4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <rect x="7" y="13" width="14" height="14" rx="2" fill="white" />
+                <line
+                  x1="8"
+                  y1="2"
+                  x2="8"
+                  y2="8"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="14"
+                  y1="2"
+                  x2="14"
+                  y2="8"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="20"
+                  y1="2"
+                  x2="20"
+                  y2="8"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="8"
+                  y1="32"
+                  x2="8"
+                  y2="38"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="14"
+                  y1="32"
+                  x2="14"
+                  y2="38"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="20"
+                  y1="32"
+                  x2="20"
+                  y2="38"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="26"
+                  y1="14"
+                  x2="32"
+                  y2="14"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="26"
+                  y1="20"
+                  x2="32"
+                  y2="20"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="26"
+                  y1="26"
+                  x2="32"
+                  y2="26"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <text
+                  x="38"
+                  y="27"
+                  font-family="Orbitron, sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                  fill="white"
+                >
+                  InovaMec
+                </text>
+              </svg>
+            </div>
+            <p style="text-align: justify;">
+              Website desenvolvido no âmbito da Prova de Aptidão Profissional
+              (PAP) do Curso Técnico de Gestão e Programação de Sistemas
+              Informáticos (TGPSI).
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="#sobre">O Que É</a></li>
+              <li><a href="#curiosidades">Curiosidades</a></li>
+              <li><a href="galeria.html" target="_blank">Galeria</a></li>
+              <li><a href="#escolas">Escolas</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Informação</h4>
+            <ul>
+              <li><a href="#percurso">Percurso Profissional</a></li>
+              <li><a href="#salarios">Salários</a></li>
+              <li><a href="#futuro">Futuro da Área</a></li>
+              <li><a href="faq.html" target="_blank">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Recursos</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.anqep.gov.pt"
+                  target="_blank"
+                  rel="noopener"
+                  >ANQEP</a
+                >
+              </li>
+              <li>
+                <a href="https://www.dge.mec.pt" target="_blank" rel="noopener"
+                  >DGE</a
+                >
+              </li>
+              <li>
+                <a href="https://www.iefp.pt" target="_blank" rel="noopener"
+                  >IEFP</a
+                >
+              </li>
+              <li><a href="contacto.html" target="_blank">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026 Mecatrónica em Portugal | Prova de Aptidão Profissional –
+            TGPSI
+          </p>
+          <p>Desenvolvido para fins educativos em âmbito de estudo</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+      ↑
+    </button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

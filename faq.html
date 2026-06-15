@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perguntas frequentes sobre Mecatrónica em Portugal." />
+    <title>FAQ | InovaMec – Mecatrónica em Portugal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .page-topbar {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(5,10,21,0.85); backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-light);
+        padding: 0 2rem; height: 72px;
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .page-topbar-logo { display: flex; align-items: center; }
+      .page-topbar-logo svg { height: 36px; width: auto; }
+      .page-back {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.5rem 1.2rem; border-radius: 100px;
+        border: 1px solid var(--border); color: var(--text-secondary);
+        font-size: 0.85rem; font-weight: 500; transition: var(--transition);
+        background: rgba(255,255,255,0.04);
+      }
+      .page-back:hover { color: var(--primary); border-color: var(--primary); background: rgba(14,165,233,0.1); }
+      .page-hero {
+        background: var(--gradient-hero); padding: 5rem 2rem 4rem;
+        text-align: center; position: relative; overflow: hidden;
+      }
+      .page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,0.18) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .page-hero-tag {
+        display: inline-block; background: var(--gradient-primary); color: white;
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+        text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 100px; margin-bottom: 1.2rem;
+      }
+      .page-hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem,5vw,3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem;
+        background: var(--gradient-primary); -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; background-clip: text;
+        filter: drop-shadow(0 0 40px rgba(14,165,233,0.5));
+      }
+      .page-hero-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto; }
+      .page-content { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+      .page-footer {
+        text-align: center; padding: 2rem;
+        border-top: 1px solid var(--border-light);
+        color: var(--text-secondary); font-size: 0.85rem;
+      }
+      .page-footer a { color: var(--primary); font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <header class="page-topbar">
+      <a href="index.html" class="page-topbar-logo" aria-label="InovaMec">
+        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="8" width="24" height="24" rx="4" stroke="white" stroke-width="2"/>
+          <rect x="7" y="13" width="14" height="14" rx="2" fill="white"/>
+          <line x1="8" y1="2" x2="8" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="2" x2="14" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="2" x2="20" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="8" y1="32" x2="8" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="32" x2="14" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="32" x2="20" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="14" x2="32" y2="14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="20" x2="32" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="26" x2="32" y2="26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <text x="38" y="27" font-family="Orbitron, sans-serif" font-size="16" font-weight="700" fill="white">InovaMec</text>
+        </svg>
+      </a>
+      <a href="index.html" class="page-back" id="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+    </header>
+
+    <div class="page-hero">
+      <div class="page-hero-tag">Respostas</div>
+      <h1 class="page-hero-title">Perguntas Frequentes</h1>
+      <p class="page-hero-desc">As dúvidas mais comuns sobre Mecatrónica em Portugal.</p>
+    </div>
+
+    <main class="page-content">
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>O curso de Mecatrónica dá equivalência ao 12º ano?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. O Curso Profissional de Técnico de Mecatrónica confere uma dupla certificação: equivalência ao 12º ano do ensino secundário e uma qualificação profissional de nível 4 (Quadro Nacional de Qualificações). Isso permite ao aluno ingressar no ensino superior ou entrar diretamente no mercado de trabalho.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Preciso de saber muito de matemática para este curso?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Não é necessário ser um génio da matemática, mas algumas competências básicas são necessárias, especialmente em álgebra, trigonometria e física. O curso começa do nível básico e vai aprofundando os conceitos progressivamente. O mais importante é gostar de tecnologia e ter vontade de aprender.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Posso entrar na universidade depois do curso profissional?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Existem várias formas de aceder ao ensino superior após o curso profissional: através dos exames nacionais de acesso, pelo concurso "Maiores de 23 anos", ou através de Cursos de Especialização Tecnológica (CET/TESP) nos institutos politécnicos. Muitas universidades valorizam alunos com formação técnica.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Qual é a duração do Curso Profissional de Mecatrónica?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O Curso Profissional tem a duração de 3 anos letivos (do 10º ao 12º ano), com um total de 3.100 a 3.400 horas de formação. No final do 12º ano, os alunos realizam a Prova de Aptidão Profissional (PAP), que demonstra as competências adquiridas ao longo da formação.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Há boa empregabilidade na Mecatrónica em Portugal?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, a taxa de empregabilidade é muito elevada. A escassez de técnicos especializados em Portugal faz com que os recrutadores procurem ativamente profissionais desta área. Indústrias como automóvel (Volkswagen/AutoEuropa, Stellantis), aeronáutica (OGMA), eletrónica e agroindústria são grandes empregadores.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Quais são as disciplinas do Curso Profissional de Mecatrónica?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O plano curricular inclui disciplinas como: <strong>Eletricidade e Eletrónica</strong>, <strong>Sistemas Mecânicos</strong>, <strong>Pneumática e Hidráulica</strong>, <strong>Automação e Robótica</strong>, <strong>Programação de CNC</strong>, <strong>Instalações Elétricas</strong>, <strong>Sistemas de Controlo</strong>, além das disciplinas de formação geral e formação em contexto de trabalho (FCT).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>No que consiste a PAP (Prova de Aptidão Profissional)?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>A PAP é o projeto final do Curso Profissional. Consiste no desenvolvimento de um projeto técnico que demonstra os conhecimentos e competências adquiridos. Pode ser um sistema mecatrónico construído pelo aluno, uma automação, um protótipo robótico, etc. É avaliada por um júri externo e inclui uma apresentação oral e defesa do trabalho.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p>© 2025 <a href="index.html">InovaMec</a> · FAQ · PAP</p>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          document.querySelectorAll('.faq-question').forEach(b => {
+            b.setAttribute('aria-expanded', 'false');
+            b.nextElementSibling.classList.remove('open');
+          });
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            btn.nextElementSibling.classList.add('open');
+          }
+        });
+      });
+
+      // ---- VOLTAR AO SITE ----
+      document.getElementById('btn-voltar').addEventListener('click', function(e) {
+        if (window.opener && !window.opener.closed) {
+          e.preventDefault();
+          window.close();
+        }
+      });
+    </script>
+  </body>
+</html>

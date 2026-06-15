@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Outer gear shape -->
+  <path d="M50 8
+    L55 2 L60 8
+    L67 5 L68 12
+    L75 12 L73 19
+    L80 22 L75 27
+    L80 33 L73 35
+    L75 43 L68 42
+    L65 49 L58 46
+    L55 53 L50 50
+    L45 53 L42 46
+    L35 49 L32 42
+    L25 43 L27 35
+    L20 33 L25 27
+    L20 22 L27 19
+    L25 12 L32 12
+    L33 5 L40 8
+    L45 2 Z"
+    fill="white" opacity="0.15"/>
+  <!-- Gear teeth - clean approach -->
+  <path d="M50 5
+    C52 5 54 6 55 7
+    L58 3 L62 8
+    C64 7 66 7 68 8
+    L70 4 L73 10
+    C75 11 76 13 77 14
+    L82 13 L82 18
+    C84 19 85 21 85 23
+    L90 25 L88 30
+    C88 32 87 34 86 35
+    L90 38 L87 43
+    C86 45 84 46 83 47
+    L84 52 L79 53
+    C78 55 76 56 74 57
+    L74 62 L69 62
+    C67 64 65 65 63 65
+    L62 70 L57 69
+    C55 70 53 71 50 71
+    C47 71 45 70 43 69
+    L38 70 L37 65
+    C35 65 33 64 31 62
+    L26 62 L26 57
+    C24 56 22 55 21 53
+    L16 52 L17 47
+    C16 46 14 45 13 43
+    L10 38 L14 35
+    C13 34 12 32 12 30
+    L10 25 L15 23
+    C15 21 16 19 18 18
+    L18 13 L23 14
+    C24 13 25 11 27 10
+    L30 4 L33 8
+    C35 7 37 7 38 8
+    L42 3 L45 7
+    C46 6 48 5 50 5Z"
+    fill="white" opacity="0.9" stroke="white" stroke-width="0.5"/>
+  <!-- Inner circle background -->
+  <circle cx="50" cy="37" r="22" fill="#0a1628"/>
+  <!-- Circuit traces -->
+  <line x1="34" y1="37" x2="42" y2="37" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="58" y1="37" x2="66" y2="37" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="50" y1="22" x2="50" y2="28" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="42" y1="37" x2="42" y2="30" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="42" y1="30" x2="50" y2="30" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="58" y1="37" x2="58" y2="44" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="58" y1="44" x2="50" y2="44" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <!-- Robot arm -->
+  <rect x="44" y="28" width="12" height="18" rx="3" fill="white" opacity="0.85"/>
+  <rect x="47" y="46" width="6" height="8" rx="2" fill="white" opacity="0.85"/>
+  <!-- Circuit dots -->
+  <circle cx="42" cy="37" r="2" fill="#0ea5e9"/>
+  <circle cx="58" cy="37" r="2" fill="#0ea5e9"/>
+  <circle cx="50" cy="28" r="2" fill="#38bdf8"/>
+  <circle cx="50" cy="46" r="2" fill="#38bdf8"/>
+  <!-- Chip lines on arm -->
+  <line x1="44" y1="33" x2="56" y2="33" stroke="#0a1628" stroke-width="1"/>
+  <line x1="44" y1="37" x2="56" y2="37" stroke="#0a1628" stroke-width="1"/>
+  <line x1="44" y1="41" x2="56" y2="41" stroke="#0a1628" stroke-width="1"/>
+</svg>

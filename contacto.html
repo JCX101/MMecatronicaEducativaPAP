@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contacte o InovaMec — dúvidas sobre Mecatrónica em Portugal." />
+    <title>Contacto | InovaMec – Mecatrónica em Portugal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .page-topbar {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(5,10,21,0.85); backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-light);
+        padding: 0 2rem; height: 72px;
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .page-topbar-logo svg { height: 36px; width: auto; }
+      .page-back {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.5rem 1.2rem; border-radius: 100px;
+        border: 1px solid var(--border); color: var(--text-secondary);
+        font-size: 0.85rem; font-weight: 500; transition: var(--transition);
+        background: rgba(255,255,255,0.04);
+      }
+      .page-back:hover { color: var(--primary); border-color: var(--primary); background: rgba(14,165,233,0.1); }
+      .page-hero {
+        background: var(--gradient-hero); padding: 5rem 2rem 4rem;
+        text-align: center; position: relative; overflow: hidden;
+      }
+      .page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,0.18) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .page-hero-tag {
+        display: inline-block; background: var(--gradient-primary); color: white;
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+        text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 100px; margin-bottom: 1.2rem;
+      }
+      .page-hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem,5vw,3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem;
+        background: var(--gradient-primary); -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; background-clip: text;
+        filter: drop-shadow(0 0 40px rgba(14,165,233,0.5));
+      }
+      .page-hero-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto; }
+      .page-content {
+        max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem;
+        /* reuse section-dark colours */
+        color: var(--text-primary);
+      }
+      .page-footer {
+        text-align: center; padding: 2rem;
+        border-top: 1px solid var(--border-light);
+        color: var(--text-secondary); font-size: 0.85rem;
+        background: var(--bg-dark);
+      }
+      .page-footer a { color: var(--primary); font-weight: 600; }
+      /* Override section bg for standalone page */
+      body { background: var(--bg-dark-2); }
+    </style>
+  </head>
+  <body>
+
+    <header class="page-topbar">
+      <a href="index.html" class="page-topbar-logo" aria-label="InovaMec">
+        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="8" width="24" height="24" rx="4" stroke="white" stroke-width="2"/>
+          <rect x="7" y="13" width="14" height="14" rx="2" fill="white"/>
+          <line x1="8" y1="2" x2="8" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="2" x2="14" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="2" x2="20" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="8" y1="32" x2="8" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="32" x2="14" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="32" x2="20" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="14" x2="32" y2="14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="20" x2="32" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="26" y1="26" x2="32" y2="26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <text x="38" y="27" font-family="Orbitron, sans-serif" font-size="16" font-weight="700" fill="white">InovaMec</text>
+        </svg>
+      </a>
+      <a href="index.html" class="page-back" id="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+    </header>
+
+    <div class="page-hero">
+      <div class="page-hero-tag">Contacto</div>
+      <h1 class="page-hero-title">Fale Connosco</h1>
+      <p class="page-hero-desc">Tens dúvidas sobre Mecatrónica? Preenche o formulário e entraremos em contacto.</p>
+    </div>
+
+    <main class="page-content">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@mecatronica-pap.pt</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div>
+              <h4>Telefone</h4>
+              <p>+351 210 000 000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Localização</h4>
+              <p>Portugal Continental</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/mecatr%C3%B3nicalatam/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.randstad.pt/empregos/q-mecatr%C3%B3nica/" class="social-btn" aria-label="Randstad Portugal" target="_blank" rel="noopener noreferrer">
+                <svg class="randstad-icon" viewBox="0 0 100 100" aria-hidden="true">
+                  <path d="M20 32 H80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M50 32 V68" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <div class="yt-wrapper" id="yt-wrapper">
+                <a href="#" class="social-link yt-toggle" id="yt-toggle" aria-expanded="false">
+                  <svg class="yt-icon" viewBox="0 0 100 100" aria-hidden="true">
+                    <path d="M22 36 Q22 28 30 28 H70 Q78 28 78 36 V64 Q78 72 70 72 H30 Q22 72 22 64 Z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+                    <path d="M43 39 L63 50 L43 61 Z" fill="currentColor" stroke="none"/>
+                  </svg>
+                </a>
+                <div class="yt-popup" id="yt-popup">
+                  <a href="https://youtube.com/playlist?list=PL3GpqmFUgjNm0-1rGLcpmPLQxET_8cqqk&si=TkDGIMbulECJe8-m" class="yt-popup-item" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> Vídeos Informativos
+                  </a>
+                  <a href="https://youtube.com/playlist?list=PLFuyIXCoZSRLsZ02Sb-7FTfX7iAA4tg8A&si=-V9tP5cYZAgXKP5G" class="yt-popup-item" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> Aulas Online
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="O teu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="email@exemplo.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option value="">Selecione um assunto</option>
+              <option value="duvidas">Dúvidas sobre o Curso</option>
+              <option value="escolas">Escolas e Candidaturas</option>
+              <option value="carreira">Percurso Profissional</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem aqui..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Enviar Mensagem</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <div class="form-success" id="form-success">
+            Mensagem enviada com sucesso! Entraremos em contacto em breve.
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p>© 2025 <a href="index.html">InovaMec</a> · Contacto · PAP</p>
+    </footer>
+
+    <script>
+      // Contact form
+      const contactForm = document.getElementById('contact-form');
+      const formSuccess = document.getElementById('form-success');
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+        if (!nome || !email || !mensagem) return;
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.textContent = 'A enviar...';
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          contactForm.reset();
+          formSuccess.style.display = 'block';
+          submitBtn.innerHTML = '<span>Enviar Mensagem</span><span class="btn-arrow">→</span>';
+          submitBtn.disabled = false;
+          setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
+        }, 1200);
+      });
+
+      // YouTube popup
+      const ytToggle = document.getElementById('yt-toggle');
+      const ytPopup = document.getElementById('yt-popup');
+      const ytWrapper = document.getElementById('yt-wrapper');
+      if (ytToggle && ytPopup && ytWrapper) {
+        ytToggle.addEventListener('click', (e) => {
+          e.preventDefault(); e.stopPropagation();
+          const isOpen = ytPopup.classList.toggle('open');
+          ytToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        document.addEventListener('click', (e) => {
+          if (!ytWrapper.contains(e.target)) {
+            ytPopup.classList.remove('open');
+            ytToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') { ytPopup.classList.remove('open'); ytToggle.setAttribute('aria-expanded', 'false'); }
+        });
+      }
+
+      // ---- VOLTAR AO SITE ----
+      document.getElementById('btn-voltar').addEventListener('click', function(e) {
+        if (window.opener && !window.opener.closed) {
+          e.preventDefault();
+          window.close();
+        }
+      });
+    </script>
+  </body>
+</html>
